@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Payment Form</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'allimg/1-removebg-preview.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body class="payform-body">
+    <div class="container-checkout">
+        <h1 class="payform-h1-3">PAY HERE FOR <br><span>VIP</span></h1>
+        <form id="paymentForm" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="payform-group">
+                <label class="label-form" for="name">Name:</label>
+                <input class="input-form" type="text" id="namepay" placeholder="Enter your name" required>
+            </div>
+            <div class="payform-group">
+                <label class="label-form" for="gcashNumber">GCash Number:</label>
+                <input class="input-form" type="text" id="gcashNumber" required pattern="^\d{11}$" placeholder="Enter 11-digit GCash number">
+            </div>
+            <div class="payform-group">
+                <label class="label-form" for="amountpay">Amount:</label>
+                <input class="input-form" type="number" id="amountpay" placeholder="Enter amount" required min="1">
+            </div>
+            <button class="button-payform" type="submit" onclick="handlePaymentFormSubmit(event)">Submit Payment</button>
+        </form>
+        <a href="{% url 'GYMPREDATOR' %}#Pricing" class="go-back">Go Back</a>
+        <div id="messageme"></div>
+    </div>
+
+    <div id="custom-alert" class="custom-alert">
+        <div class="alert-content">
+          <span id="alert-message"></span>
+          <button id="alert-close" class="alert-close">OK</button>
+        </div>
+      </div>
+</body>
+</html>

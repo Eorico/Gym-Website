@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Body Workout</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="{% static 'allimg/1-removebg-preview.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-5">
+        <h1 class="fade-in text-red">Full-Body Workout</h1>
+        <p class="lead fade-in">Get stronger and fitter with these all-around full body exercises</p>
+        <img src="{% static 'allimg/fullbody-removebg-preview.png' %}" alt="Gym Logo" class="logowolf mr-3  bounce-in" >
+    </header>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4 fade-in text">Top Full-Body Exercises</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4 clickable-card">
+                <div class="card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/burpees.gif' %}" class="card-img-top exercise-img" alt="Burpees">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Burpees</h5>
+                        <p class="card-text">Burpees are a full-body exercise that targets the chest, arms, legs, and core. It also improves cardiovascular endurance.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/push-up.gif' %}" class="card-img-top exercise-img" alt="Push-Ups">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Push-Ups</h5>
+                        <p class="card-text">Push-ups are a classic upper body exercise that primarily targets the chest, shoulders, and triceps. They also engage the core.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/anim-jump-squats.gif' %}" class="card-img-top exercise-img" alt="Jump Squats">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Jump Squats</h5>
+                        <p class="card-text">Jump squats are a plyometric exercise that works the quads, hamstrings, glutes, and calves, while also increasing explosive power.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/mountain-climbers.gif' %}" class="card-img-top exercise-img" alt="Mountain Climbers">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Mountain Climbers</h5>
+                        <p class="card-text">Mountain climbers are a high-intensity exercise that targets the core, legs, and arms while also boosting cardiovascular endurance.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+             
+            <div class="col-md-4 mb-4">
+                <div class="card clickble-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/deadlift.gif' %}" class="card-img-top exercise-img" alt="Deadlifts">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Deadlifts</h5>
+                        <p class="card-text">Deadlifts work the posterior chain, engaging the hamstrings, glutes, lower back, and core. It's a highly effective compound movement.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'gif/anim-kettlebell-swings.gif' %}" class="card-img-top exercise-img" alt="Kettlebell Swings">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Kettlebell Swings</h5>
+                        <p class="card-text">Kettlebell swings are a dynamic movement that works the hips, glutes, quads, hamstrings, and core, while also improving power and endurance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="text-center mb-4">
+        <a href="{% url 'tutorial' %}" class="btn btn-lg rounded-pill shadow-sm go-back-btn">Go Back</a>
+    </div>
+
+    <div class="modal fade" id="workout" tabindex="-1" aria-labelledby="workout" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="workout"><h2>Full-Body Workout Details</h2></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Beginner Workout:</h6>
+                    <p>3 sets of 12 repetitions <br>NOTE: Focus on learning proper form and control.  Use lighter weights to build endurance and technique.</p>
+                    <h6>Intermediate Workout:</h6>
+                    <p>4 sets of 8-10 repetitions <br> NOTE: Increase weight slightly to challenge strength. <br> Maintain proper form and gradually reduce rest times between sets.</p>
+                    <h6>Veteran Workout:</h6>
+                    <p>5 sets of 5-6 repetitions <br> NOTE: Use heavier weights to focus on maximum strength. <br> Increase intensity with shorter rest intervals. <br>Include techniques like pause reps (pausing at the bottom of the lift) for greater time under tension.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Gym Tutorials | All Rights Reserved</p>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

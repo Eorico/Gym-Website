@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arm Workout</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="{% static 'allimg/1-removebg-preview.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-5">
+        <h1 class="fade-in text-red">Arm Workout</h1>
+        <p class="lead fade-in">Build your arms with these effective biceps, triceps, and forearm exercises</p>
+        <img src="{% static 'allimg/armslogo-removebg-preview.png' %}" alt="Gym Logo" class="logowolf mr-3  bounce-in" >
+    </header>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4 fade-in text">Top Arm Exercises</h2>
+        
+        <div class="row">
+            
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/Wide-Grip-Barbell-Curl.webp' %}" class="card-img-top exercise-img" alt="Bicep Curls">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Bicep Curls</h5>
+                        <p class="card-text">Bicep curls are a fundamental exercise for building arm strength and size. They target the biceps brachii and forearms, helping to develop your upper arms.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/Triceps-Dips.gif' %}" class="card-img-top exercise-img" alt="Tricep Dips">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Tricep Dips</h5>
+                        <p class="card-text">Tricep dips are a bodyweight exercise that targets the triceps, helping to define and strengthen the back of the upper arm.</p>
+                    </a>   
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/hammer-curls.gif' %}" class="card-img-top exercise-img" alt="Hammer Curls">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Hammer Curls</h5>
+                        <p class="card-text">Hammer curls are a variation of the bicep curl that also target the forearms, building both the biceps and forearm strength.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/tricep-pushdown.gif' %}" class="card-img-top exercise-img" alt="Tricep Pushdowns">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Tricep Pushdowns</h5>
+                        <p class="card-text">Tricep pushdowns are performed using a cable machine, targeting the triceps with a focus on the long head of the muscle.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/close-grip-bench-press.gif' %}" class="card-img-top exercise-img" alt="Close-grip Bench Press">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Close-grip Bench Press</h5>
+                        <p class="card-text">The close-grip bench press is a variation of the traditional bench press that targets the triceps more than the chest.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/8preacher-curl.gif' %}" class="card-img-top exercise-img" alt="Preacher Curls">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Preacher Curls</h5>
+                        <p class="card-text">Preacher curls are an excellent exercise for isolating the biceps. They help prevent swinging and focus on the muscle's contraction.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="workout" tabindex="-1" aria-labelledby="workout" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="workout"><h2>Arms Workout Details</h2></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Beginner Workout:</h6>
+                    <p>3 sets of 12 repetitions <br>NOTE: Focus on learning proper form and control.  Use lighter weights to build endurance and technique.</p>
+                    <h6>Intermediate Workout:</h6>
+                    <p>4 sets of 8-10 repetitions <br> NOTE: Increase weight slightly to challenge strength. <br> Maintain proper form and gradually reduce rest times between sets.</p>
+                    <h6>Veteran Workout:</h6>
+                    <p>5 sets of 5-6 repetitions <br> NOTE: Use heavier weights to focus on maximum strength. <br> Increase intensity with shorter rest intervals. <br>Include techniques like pause reps (pausing at the bottom of the lift) for greater time under tension.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="text-center mb-4">
+        <a href="{% url 'tutorial' %}" class="btn btn-lg rounded-pill shadow-sm go-back-btn">Go Back</a>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Gym Tutorials | All Rights Reserved</p>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

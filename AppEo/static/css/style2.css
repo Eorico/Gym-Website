@@ -1,0 +1,144 @@
+
+.gym-tutorial{
+    background-color: rgb(255, 255, 255);
+}
+
+.logowolf {
+    margin-right: 20px; 
+    width: 100px;  
+    height: 100px;  
+    filter: brightness(0) invert(1);
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-out;
+}
+.text-red{
+    color: red;
+    font-family: Agency FB;
+    font-size: 50px;
+}
+.text{
+    font-family: Agency FB;
+    font-size: 38px;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bounce-in {
+    animation: bounceIn 1.5s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.card{
+    cursor: pointer;
+}
+.card-body {
+    text-align: center;
+    cursor: auto;
+}
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: transparent;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;  
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #fff;  
+    border-radius: 50%;  
+    width: 30px;  
+    height: 30px;  
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: transparent; 
+    transform: scale(1.1); 
+    opacity: 1;  
+}
+
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clickable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: transparent; 
+}
+
+.exercise-img {
+    height: 300px;
+    object-fit: cover;
+}
+.exercise-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+.go-back-btn {
+    background-color: rgb(201, 195, 195);
+    color: black;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.go-back-btn:hover {
+    transform: scale(1);  
+    color: white;
+    background-color: black;  
+    box-shadow: 0 40px 50px rgba(0, 0, 0, 0.2);  
+}
+
+.go-back-btn:active {
+    transform: scale(1);  
+}
+
+@media (max-width: 576px) {
+    .go-back-btn {
+        width: 100%;  
+        font-size: 1.2rem;  
+    }
+}

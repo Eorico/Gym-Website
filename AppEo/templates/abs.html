@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>abs Workout</title>
+    <link rel="icon" href="{% static 'allimg/1-removebg-preview.png' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-5">
+        <h1 class="fade-in text-red">Abs Workout</h1>
+        <p class="lead fade-in">Strengthen and define your core with these top ab exercises</p>
+        <img src="{% static 'allimg/abslogo-removebg-preview.png' %}" alt="Gym Logo" class="logowolf mr-3  bounce-in" >
+    </header>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4 fade-in text">Top Abs Exercises</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/crunches.gif' %}" class="card-img-top exercise-img" alt="Crunches">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Crunches</h5>
+                        <p class="card-text">Crunches are a simple yet effective exercise that targets the upper abdominals. Focus on controlled movements to maximize engagement.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/lying-leg-raise.gif' %}" class="card-img-top exercise-img" alt="Leg Raises">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Leg Raises</h5>
+                        <p class="card-text">Leg raises primarily target the lower abdominals and help improve overall core strength. Keep your movements controlled to engage your core fully.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/plank.gif' %}" class="card-img-top exercise-img" alt="Planks">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Planks</h5>
+                        <p class="card-text">Planks are an isometric exercise that engages your entire core. Hold the position for as long as possible to build endurance and strength.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/Bicycle-Crunch.gif' %}" class="card-img-top exercise-img" alt="Bicycle Crunches">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Bicycle Crunches</h5>
+                        <p class="card-text">Bicycle crunches are great for engaging the obliques and upper abs. Perform slow, controlled movements to target the core muscles effectively.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/russiantwist.gif' %}" class="card-img-top exercise-img" alt="Russian Twists">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Russian Twists</h5>
+                        <p class="card-text">Russian twists are great for building strength in the obliques and improving rotational core stability. Use a weight for added resistance.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/mountain-climbers.gif' %}" class="card-img-top exercise-img" alt="Mountain Climbers">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Mountain Climbers</h5>
+                        <p class="card-text">Mountain climbers are a full-body exercise that also targets the core, improving cardiovascular endurance while engaging the abs.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mb-4">
+        <a href="{% url 'tutorial' %}" class="btn btn-lg rounded-pill shadow-sm go-back-btn">Go Back</a>
+    </div>
+
+    <div class="modal fade" id="workout" tabindex="-1" aria-labelledby="workout" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="workout"><h2>Arms Workout Details</h2></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Beginner Workout:</h6>
+                    <p>3 sets of 12 repetitions <br>NOTE: Focus on learning proper form and control.  Use lighter weights to build endurance and technique.</p>
+                    <h6>Intermediate Workout:</h6>
+                    <p>4 sets of 8-10 repetitions <br> NOTE: Increase weight slightly to challenge strength. <br> Maintain proper form and gradually reduce rest times between sets.</p>
+                    <h6>Veteran Workout:</h6>
+                    <p>5 sets of 5-6 repetitions <br> NOTE: Use heavier weights to focus on maximum strength. <br> Increase intensity with shorter rest intervals. <br>Include techniques like pause reps (pausing at the bottom of the lift) for greater time under tension.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Gym Tutorials | All Rights Reserved</p>
+    </footer>
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

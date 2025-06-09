@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back Workout</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="{% static 'allimg/1-removebg-preview.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-5">
+        <h1 class="fade-in text-red">Back Workout</h1>
+        <p class="lead fade-in">Strengthen and define your back with these top exercises</p>
+        <img src="{% static 'allimg/backlogo-removebg-preview.png' %}" alt="Gym Logo" class="logowolf mr-3  bounce-in" >
+    </header>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4 fade-in text">Top Back Exercises</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/deadlift.gif' %}" class="card-img-top exercise-img" alt="Deadlifts">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Deadlifts</h5>
+                        <p class="card-text">Deadlifts are a compound movement that targets the lower back, glutes, and hamstrings. They are one of the most effective strength-building exercises.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/lat-pulldown.gif' %}" class="card-img-top exercise-img" alt="Lat Pulldowns">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Lat Pulldowns</h5>
+                        <p class="card-text">Lat pulldowns are great for targeting the latissimus dorsi muscles. They help develop width and strength in the upper back.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/barbelrow.gif' %}" class="card-img-top exercise-img" alt="Barbell Rows">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Barbell Rows</h5>
+                        <p class="card-text">Barbell rows are a great compound exercise that targets the upper back and rear delts, helping build overall back strength.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+           
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/T-Bar-Row.gif' %}" class="card-img-top exercise-img" alt="T-Bar Rows">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">T-Bar Rows</h5>
+                        <p class="card-text">T-Bar rows target the middle back and are great for adding thickness to the back. Use a wide grip to engage more of the rear delts.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/pullups.gif' %}" class="card-img-top exercise-img" alt="Pull-ups">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Pull-ups</h5>
+                        <p class="card-text">Pull-ups are a bodyweight exercise that primarily works the lats and the biceps. They are excellent for building overall back strength and size.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/Seated-Cable-Row.gif' %}" class="card-img-top exercise-img" alt="Seated Rows">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Seated Rows</h5>
+                        <p class="card-text">Seated rows are a great exercise to focus on the mid-back, helping develop thickness and strength in the upper back.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+    <div class="text-center mb-4">
+        <a href="{% url 'tutorial' %}" class="btn btn-lg rounded-pill shadow-sm go-back-btn">Go Back</a>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Gym Tutorials | All Rights Reserved</p>
+    </footer>
+
+    <div class="modal fade" id="workout" tabindex="-1" aria-labelledby="workout" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="workout"><h2>Back Workout Details</h2></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Beginner Workout:</h6>
+                    <p>3 sets of 12 repetitions <br>NOTE: Focus on learning proper form and control.  Use lighter weights to build endurance and technique.</p>
+                    <h6>Intermediate Workout:</h6>
+                    <p>4 sets of 8-10 repetitions <br> NOTE: Increase weight slightly to challenge strength. <br> Maintain proper form and gradually reduce rest times between sets.</p>
+                    <h6>Veteran Workout:</h6>
+                    <p>5 sets of 5-6 repetitions <br> NOTE: Use heavier weights to focus on maximum strength. <br> Increase intensity with shorter rest intervals. <br>Include techniques like pause reps (pausing at the bottom of the lift) for greater time under tension.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

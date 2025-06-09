@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chest Workout</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="{% static 'allimg/1-removebg-preview.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+    
+    <header class="bg-dark text-white text-center py-5">
+        <h1 class="fade-in">Chest Workout</h1>
+        <p class="lead fade-in">Master your chest exercises with these effective workouts</p>
+        <img src="{% static 'allimg/armslogo-removebg-preview.png' %}" alt="Gym Logo" class="logowolf mr-3  bounce-in" >
+    </header>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4 fade-in text">Top Chest Exercises</h2>
+        
+        <div class="row" id="exercise-cards">
+        
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/Barbell-Bench-Press.gif' %}" class="card-img-top exercise-img" alt="Bench Press">
+                    <div class="card-body" >
+                        <h5 class="card-title exercise-title">Bench Press</h5>
+                        <p class="card-text" >The bench press is a classic chest exercise that targets the pectoralis major. It's great for building upper body strength and mass.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/Dumbbell-Press.gif' %}" class="card-img-top exercise-img" alt="Dumbbell Chest Press">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Dumbbell Chest Press</h5>
+                        <p class="card-text">This exercise uses dumbbells to engage the chest muscles while also providing a greater range of motion compared to the barbell press.</p>
+                    </a>    
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/push-up.gif' %}" class="card-img-top exercise-img" alt="Push-ups">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Push-ups</h5>
+                        <p class="card-text">Push-ups are a bodyweight exercise that targets the chest, shoulders, and triceps. They are a great way to build strength with no equipment needed.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+          
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/chest-dip.gif' %}" class="card-img-top exercise-img" alt="Chest Dips">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Chest Dips</h5>
+                        <p class="card-text">Chest dips are a compound movement that work the chest, shoulders, and triceps. They are great for building strength and definition.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/incline-press.gif' %}" class="card-img-top exercise-img" alt="Incline Bench Press">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Incline Bench Press</h5>
+                        <p class="card-text">The incline bench press targets the upper chest and shoulders. This variation is great for adding size and definition to the upper chest region.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card clickable-card">
+                    <a data-bs-toggle="modal" data-bs-target="#workout">
+                    <img src="{% static 'gif/flyes.gif' %}" class="card-img-top exercise-img" alt="Chest Flyes">
+                    <div class="card-body">
+                        <h5 class="card-title exercise-title">Chest Flyes</h5>
+                        <p class="card-text">Chest flyes involve bringing the arms together in a wide arc, targeting the chest muscles. This isolation exercise is great for sculpting the chest.</p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="text-center mb-4">
+        <a href="{% url 'tutorial' %}" class="btn btn-lg rounded-pill shadow-sm go-back-btn">Go Back</a>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Gym Tutorials | All Rights Reserved</p>
+    </footer>
+
+     <div class="modal fade" id="workout" tabindex="-1" aria-labelledby="workout" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="workout"><h2>Chest Workout Details</h2></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Beginner Workout:</h6>
+                    <p>3 sets of 12 repetitions <br>NOTE: Focus on learning proper form and control.  Use lighter weights to build endurance and technique.</p>
+                    <h6>Intermediate Workout:</h6>
+                    <p>4 sets of 8-10 repetitions <br> NOTE: Increase weight slightly to challenge strength. <br> Maintain proper form and gradually reduce rest times between sets.</p>
+                    <h6>Veteran Workout:</h6>
+                    <p>5 sets of 5-6 repetitions <br> NOTE: Use heavier weights to focus on maximum strength. <br> Increase intensity with shorter rest intervals. <br>Include techniques like pause reps (pausing at the bottom of the lift) for greater time under tension.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
