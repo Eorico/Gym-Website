@@ -45,3 +45,4 @@ websocket-client==1.8.0
 wheel==0.45.0
 whitenoise==6.9.0
 wsproto==1.2.0
+gunicorn
