@@ -1,1 +1,2 @@
-web: gunicorn AppEo.wsgi:application
+web: ggunicorn EoWeb.wsgi:application
+
